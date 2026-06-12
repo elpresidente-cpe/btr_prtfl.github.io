@@ -213,10 +213,7 @@ main {
   grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
   gap: 1rem;
   align-items: center;
-  padding: 0 1.5rem 1.5rem;
-  margin-top: -2.8rem;
-  position: relative;
-  z-index: 5;
+  padding: 1.5rem;
 }
 
 .profile-avatar-wrap {
