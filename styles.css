@@ -166,36 +166,132 @@ main {
   padding-top: 4.5rem;
 }
 
-.hero-shell {
-  display: grid;
-  grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.9fr);
-  gap: 1.2rem;
-  align-items: stretch;
-}
-
-.hero-panel,
-.hero-aside {
+.profile-shell {
   background: linear-gradient(180deg, rgba(28, 16, 39, 0.72), rgba(12, 7, 18, 0.78));
   border: 1px solid rgba(212, 175, 55, 0.18);
-  border-radius: 24px;
-  padding: 1.5rem;
+  border-radius: 28px;
+  padding: 0;
   box-shadow: var(--shadow);
   backdrop-filter: blur(14px);
+  overflow: hidden;
 }
 
-.hero-panel {
-  min-height: 100%;
+.profile-cover {
+  position: relative;
+  min-height: 220px;
+  background:
+    linear-gradient(180deg, rgba(5, 1, 13, 0.12), rgba(5, 1, 13, 0.68)),
+    url("pictures/bbb.jpg") center/cover no-repeat;
 }
 
-.hero-panel::before,
-.hero-aside::before {
-  content: "";
+.profile-overlay {
   position: absolute;
   inset: 0;
-  border-radius: inherit;
-  pointer-events: none;
-  background: linear-gradient(135deg, rgba(143, 86, 255, 0.08), rgba(212, 175, 55, 0.05), rgba(142, 31, 47, 0.08));
-  opacity: 0.9;
+  background:
+    linear-gradient(90deg, rgba(143, 86, 255, 0.26), transparent 38%, transparent 72%, rgba(212, 175, 55, 0.24)),
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.08) 0%, transparent 28%),
+    radial-gradient(circle at 80% 60%, rgba(212, 175, 55, 0.08) 0%, transparent 24%);
+}
+
+.profile-banner-copy {
+  position: relative;
+  z-index: 1;
+  padding: 1.75rem 1.5rem 2rem;
+  max-width: 42rem;
+}
+
+.profile-line {
+  margin: 0.35rem 0 0;
+  color: rgba(247, 239, 230, 0.88);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.86rem;
+}
+
+.profile-summary-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  gap: 1rem;
+  align-items: center;
+  padding: 0 1.5rem 1.5rem;
+  margin-top: -2.8rem;
+}
+
+.profile-avatar-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(8, 5, 14, 0.78);
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  border-radius: 24px;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+}
+
+.profile-avatar {
+  width: 132px;
+  height: 132px;
+  border-radius: 24px;
+  object-fit: cover;
+  border: 3px solid rgba(245, 216, 143, 0.35);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+}
+
+.profile-meta h2 {
+  margin: 0;
+  font-size: clamp(1.35rem, 2vw, 2rem);
+}
+
+.profile-meta p {
+  margin: 0.35rem 0 0;
+}
+
+.profile-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.75rem;
+}
+
+.profile-tags span,
+.stat-pill {
+  border-radius: 999px;
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  background: rgba(18, 10, 28, 0.78);
+}
+
+.profile-tags span {
+  padding: 0.28rem 0.62rem;
+  color: #f4e1ae;
+  font-size: 0.8rem;
+}
+
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.stat-pill {
+  padding: 0.95rem 1rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.stat-pill strong {
+  display: block;
+  font-size: 1.15rem;
+  color: #fff3c8;
+}
+
+.stat-pill span {
+  display: block;
+  margin-top: 0.25rem;
+  color: rgba(247, 239, 230, 0.72);
+  font-size: 0.76rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
 .hero-panel,
@@ -321,6 +417,11 @@ main {
   text-shadow: 0 0 22px rgba(143, 86, 255, 0.14);
 }
 
+.profile-shell .hero-panel,
+.profile-shell .hero-aside {
+  display: none;
+}
+
 .eyebrow {
   display: inline-block;
   margin: 0;
@@ -433,6 +534,11 @@ h3 {
   padding: 1rem 1.05rem;
   box-shadow: var(--shadow);
   backdrop-filter: blur(14px);
+}
+
+.project-card,
+.info-card {
+  padding-top: 1.25rem;
 }
 
 .project-card:hover,
@@ -595,6 +701,12 @@ h3 {
   box-shadow: 0 12px 28px rgba(212, 175, 55, 0.16);
 }
 
+.mini-list li,
+.project-card p,
+.info-card p {
+  font-size: 0.95rem;
+}
+
 .site-footer {
   padding: 2rem 1rem 2.5rem;
   text-align: center;
@@ -692,6 +804,34 @@ h3 {
   .project-card,
   .info-card {
     padding: 1rem;
+  }
+
+  .profile-summary-card {
+    grid-template-columns: 1fr;
+    padding: 0 1rem 1rem;
+    margin-top: -1.5rem;
+  }
+
+  .profile-cover {
+    min-height: 180px;
+  }
+
+  .profile-banner-copy {
+    padding: 1.2rem 1rem 1.5rem;
+  }
+
+  .profile-avatar-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-avatar {
+    width: 112px;
+    height: 112px;
+  }
+
+  .profile-stats {
+    grid-template-columns: 1fr 1fr;
   }
 
   .hero-topbar {
