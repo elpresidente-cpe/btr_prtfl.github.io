@@ -693,6 +693,23 @@ h3 {
   border: 1px solid rgba(212, 175, 55, 0.18);
   background: rgba(18, 10, 28, 0.54);
   backdrop-filter: blur(10px);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-link::before {
+  content: attr(data-icon);
+  font-size: 1.2rem;
+  display: inline-block;
+}
+
+.contact-location::before {
+  content: attr(data-icon);
+  font-size: 1rem;
+  display: inline-block;
+  margin-right: 0.3rem;
 }
 
 .contact-links a:hover {
