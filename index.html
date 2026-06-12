@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Carl Joseph Bitor - developer, designer, and builder." />
+  <title>Carl Joseph Bitor | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-mesh" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top">CJB</a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span class="sr-only">Toggle navigation</span>
+    </button>
+    <nav id="site-nav" class="site-nav">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section reveal">
+      <p class="eyebrow">Developer Portfolio</p>
+      <h1>Building useful digital products with clean code and strong visual taste.</h1>
+      <p class="lede">
+        Hi, I am <strong>Carl Joseph Bitor</strong>. I design and develop web experiences that are fast,
+        clear, and crafted with intent.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-solid" href="#projects">See My Work</a>
+        <a class="btn btn-outline" href="#contact">Let us Talk</a>
+      </div>
+    </section>
+
+    <section id="about" class="section reveal">
+      <h2>About Me</h2>
+      <p>
+        I am a developer focused on frontend and full-stack web projects. I enjoy turning ideas into
+        practical products, from early UI concepts to production-ready features.
+      </p>
+      <p>
+        Replace this section with your story, your background, and what kind of opportunities you are
+        looking for.
+      </p>
+    </section>
+
+    <section id="projects" class="section reveal">
+      <div class="section-head">
+        <h2>Featured Projects</h2>
+        <p>Three projects is enough for a strong first impression.</p>
+      </div>
+      <div class="project-grid">
+        <article class="project-card reveal">
+          <h3>Project One</h3>
+          <p>Short problem-solution summary. Mention your role, tech stack, and measurable outcome.</p>
+          <ul class="chip-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+          <div class="project-links">
+            <a href="#" aria-label="Open live demo for Project One">Live</a>
+            <a href="#" aria-label="Open source code for Project One">Code</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <h3>Project Two</h3>
+          <p>Describe a challenge you solved. Keep this to two lines so it stays easy to scan.</p>
+          <ul class="chip-list">
+            <li>React</li>
+            <li>Node.js</li>
+            <li>API</li>
+          </ul>
+          <div class="project-links">
+            <a href="#" aria-label="Open live demo for Project Two">Live</a>
+            <a href="#" aria-label="Open source code for Project Two">Code</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <h3>Project Three</h3>
+          <p>Highlight impact. Example: improved conversion by 18% or reduced load time by 40%.</p>
+          <ul class="chip-list">
+            <li>TypeScript</li>
+            <li>Tailwind</li>
+            <li>Firebase</li>
+          </ul>
+          <div class="project-links">
+            <a href="#" aria-label="Open live demo for Project Three">Live</a>
+            <a href="#" aria-label="Open source code for Project Three">Code</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section reveal">
+      <h2>Skills</h2>
+      <ul class="skill-grid">
+        <li>UI Engineering</li>
+        <li>Responsive Design</li>
+        <li>JavaScript / TypeScript</li>
+        <li>React</li>
+        <li>Node.js</li>
+        <li>Git & GitHub</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="section contact reveal">
+      <h2>Contact</h2>
+      <p>Open to freelance, internships, and collaboration.</p>
+      <div class="contact-links">
+        <a href="mailto:you@example.com">you@example.com</a>
+        <a href="https://github.com/your-username">GitHub</a>
+        <a href="https://www.linkedin.com/in/your-linkedin">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p><span id="year"></span> Carl Joseph Bitor. Built with intention.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
